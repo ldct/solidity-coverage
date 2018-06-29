@@ -14,7 +14,7 @@
 + `solidity-coverage` is in development and **its accuracy is unknown.** If you
 find discrepancies between the coverage report and your suite's behavior, please open an
 [issue](https://github.com/sc-forks/solidity-coverage/issues).
-+ `solidity-coverage` is [Solcover](https://github.com/JoinColony/solcover)
++ `solidity-coverage` was previously known as [Solcover](https://github.com/JoinColony/solcover)
 
 ### Install
 ```
@@ -95,7 +95,8 @@ module.exports = {
 | port   | *Number* | 8555 | Port to run testrpc on / have truffle connect to |
 | norpc | *Boolean* | false | Prevent solidity-coverage from launching its own testrpc. Useful if you are managing a complex test suite with a [shell script](https://github.com/OpenZeppelin/zeppelin-solidity/blob/ed872ca0a11c4926f8bb91dd103bea1378a3384c/scripts/coverage.sh) |
 | testCommand | *String* | `truffle test` |  Run an arbitrary test command. ex: `mocha --timeout 5000`. NB: Also set the `port` option to whatever your tests require (probably 8545). |
-| testrpcOptions | *String* | `--port 8555` | options to append to a command line invocation of testrpc. NB: Using this overwrites the defaults so always specify a port in this string *and* in the `port` option |
+| testrpcOptions | *String* | `--port 8555` | options to append to a command line invocation of testrpc. NB: Using this overwrites the defaults so always specify a port in th
+tring *and* in the `port` option |
 | copyNodeModules | *Boolean* | false | :warning:  **DEPRECATED** use `copyPackages` instead :warning: Copies `node_modules` into the coverage environment. May significantly increase the time for coverage to complete if enabled. Useful if your contracts import solidity files from an npm installed package (and your node_modules is small). |
 | copyPackages | *Array* | `[]` | Copies specific `node_modules` packages into the coverage environment. May significantly reduce the time for coverage to complete compared to `copyNodeModules`. Useful if your contracts import solidity files from an npm installed package. |
 | skipFiles | *Array* | `['Migrations.sol']` | Array of contracts or folders (with paths expressed relative to the `contracts` directory) that should be skipped when doing instrumentation. `Migrations.sol` is skipped by default, and does not need to be added to this configuration option if it is used. |
